@@ -1,0 +1,98 @@
+import random
+
+str0='This Genius introduced the concept of zero.Please enter the answer in capital letters'
+str1='This Genius invented electric bulb(Please enter the answer in capital letters.Also make sure to enter multiple words separated by spaces)'
+str2='This illustrious invented military compass.(Please enter the answer in capital letters.)'
+str3='Astrophysicist who explained the mass of a white dwarf star.(Please enter the name in capital letters)'
+str4='This genius developed the theory of relativity.(Please enter the answer in capital letters)'
+str5='This mathematician contributed the hypergeometric series.(Please enter the answer in capital letters)'
+var=[str0,str1,str2,str3,str4,str5]
+
+ans0='ARYABHATA'
+ans1='THOMAS ALVA EDISON'
+ans2='GALILEO'
+ans3='CHANDRASEKHAR'
+ans4='EINSTEIN'
+ans5='RAMANUJAN'
+ans=[ans0,ans1,ans2,ans3,ans4,ans5]
+
+
+
+num1=num2=num3=score=count=0
+guess=' '
+
+print('Welcome to DECODE GENIUS!!')
+print('Here are the questions:')
+print('1.\t')
+count=0
+num1=random.randint(0,1)
+for j in range(0,3):
+    for i in range(0,2):
+        if num1==i:
+            print(var[i])
+            break;
+        else:
+            continue
+    guess=input('Enter your guess:')
+    if guess==ans[num1]:
+        print('Correct!!!!')
+        score+=1
+        break
+    else:
+        print('Try again!')
+
+    if j==2:
+        print('Wrong answer!')
+        
+        
+    
+    
+        
+    
+
+print('2.\t')
+count=0
+num2=random.randint(2,3)
+for j in range(0,3):
+    for i in range(2,4):
+        if num2==i:
+            print(var[i])
+            break;
+    guess=input('Enter your guess:\n')
+    if guess==ans[num2]:
+        print('Correct!!!!')
+        score+=1
+        break
+    else:
+        print('Try again!')
+    if j==2:
+        print('Wrong answer')
+        
+    
+        
+
+
+num3=random.randint(4,5)
+print('3.\t')
+count=0
+for j in range(0,3):
+    for i in range(4,6):
+        if num3==i:
+            print(var[i])
+            break;
+    guess=input('Enter your guess:\n')
+    if guess==ans[num3]:
+         print('Correct!!!!')
+         score+=1
+         break
+    else:
+        print('Try again!')
+    if j==2:
+        print('Wrong answer!')
+    
+
+if score==3:
+    print('Congratulations!!!!!\nYou won the quiz!!!!!')
+else:
+    print('Oops!! Try again next time')
+    
